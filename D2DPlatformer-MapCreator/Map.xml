@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maplist>
+	<map index="1" width="4200.0" height="1500.0" MaxY="700.0" MinX="-1400.0" MaxX="2800.0" src="data\\background\\BG_la2y.png">
+		<objectgroup name="Background" index="2">
+			<background  width="-1400.0" height="-798.0">
+				<layer index="0" speedX="-0.375" speedY="0.1"/>
+				<layer index="1" speedX="-0.857" speedY="-0.3"/>
+			</background>
+		</objectgroup>
+		<objectgroup name="Bricks" index="3">
+			<image index="0" src="data\\brick\\19.png">
+				<object x="800.0" y="480.0" width="384.0" height="93.0" angle="0"/>
+				<object x="300.0" y="380.0" width="384.0" height="93.0" angle="0.0"/>
+				<object x="10.0" y="280.0" width="384.0" height="93.0" angle="0"/>
+				<object x="450.0" y="220.0" width="384.0" height="93.0" angle="0"/>
+			</image>
+			<image index="1" src="data\\brick\\Brick__001.png">
+				<object x="-1400.0" y="572.0" width="4200.0" height="128.0" angle="0"/>
+			</image>
+			<image index="2" src="data\\brick\\Brick__001_45.png">
+				<object x="1347.0" y="445.0" width="128.0" height="128.0" angle="45.0"/>
+			</image>
+			<image index="3" src="data\\brick\\Brick__002.png">
+				<object x="1474.0" y="445.0" width="128.0" height="128.0" angle="0" />
+			</image>
+			<image index="4" src="data\\brick\\Brick__001_-60.png">
+				<object x="1601.0" y="445.0" width="256.0" height="128.0" angle="150.0"/>
+			</image>
+		</objectgroup>
+		<objectgroup name="Dummy" index="4">
+			<image index ="0" src="data\\dummy\\tree01.png">
+				<object x="817.0" y="305.0"/>
+			</image>
+		</objectgroup> 
+	</map>
+</maplist>
