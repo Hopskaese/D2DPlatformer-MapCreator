@@ -35,6 +35,7 @@ class EditController
 
 	Object* m_pCurrentlySelected;
 public:
+
 	EditController(EditWindow* pEditWindow);
 	~EditController();
 
