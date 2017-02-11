@@ -1,32 +1,55 @@
-﻿  GameController.cpp
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(114): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(115): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(243): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(244): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(251): warning C4244: "Argument": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(286): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(289): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(292): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(295): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(298): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(331): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(334): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(337): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(340): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(343): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(368): warning C4244: "Initialisierung": Konvertierung von "float" in "long", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(369): warning C4244: "Initialisierung": Konvertierung von "float" in "long", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(390): warning C4244: "Argument": Konvertierung von "long" in "float", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(424): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(425): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(444): warning C4244: "Initialisierung": Konvertierung von "FLOAT" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(445): warning C4244: "Initialisierung": Konvertierung von "FLOAT" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(446): warning C4244: "Initialisierung": Konvertierung von "FLOAT" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(454): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(470): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(474): warning C4244: "-=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(487): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(492): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\nils-\desktop\ptb (2)\d2dplatformer\gamecontroller.cpp(500): warning C4244: "+=": Konvertierung von "float" in "int", möglicher Datenverlust
-  D2DPlatformer.vcxproj -> C:\Users\nils-\Desktop\ptb (2)\D2DPlatformer\Debug\D2DPlatformer.exe
-  D2DPlatformer.vcxproj -> C:\Users\nils-\Desktop\ptb (2)\D2DPlatformer\Debug\D2DPlatformer.pdb (Full PDB)
+﻿  tinyxml2.cpp
+  SpriteSheet.cpp
+  Player.cpp
+  Object.cpp
+  Map.cpp
+  MainWindow.cpp
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\mainwindow.cpp(45): warning C4838: Konvertierung von "float" zu "LONG" erfordert eine einschränkende Konvertierung
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\mainwindow.cpp(45): warning C4244: "Initialisierung": Konvertierung von "float" in "LONG", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\mainwindow.cpp(49): warning C4244: "Initialisierung": Konvertierung von "LONG" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\mainwindow.cpp(50): warning C4244: "Initialisierung": Konvertierung von "LONG" in "float", möglicher Datenverlust
+  main.cpp
+  Loader.cpp
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\loader.cpp(83): warning C4244: "Argument": Konvertierung von "float" in "int", möglicher Datenverlust
+  HPTimer.cpp
+  Graphics.cpp
+  GameController.cpp
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(114): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(115): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(243): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(244): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(251): warning C4244: "Argument": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(286): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(289): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(292): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(295): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(298): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(331): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(334): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(337): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(340): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(343): warning C4244: "=": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(368): warning C4244: "Initialisierung": Konvertierung von "float" in "long", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(369): warning C4244: "Initialisierung": Konvertierung von "float" in "long", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(390): warning C4244: "Argument": Konvertierung von "long" in "float", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(424): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(425): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(444): warning C4244: "Initialisierung": Konvertierung von "FLOAT" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(445): warning C4244: "Initialisierung": Konvertierung von "FLOAT" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(446): warning C4244: "Initialisierung": Konvertierung von "FLOAT" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(454): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(470): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(474): warning C4244: "-=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(487): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(492): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\gamecontroller.cpp(500): warning C4244: "+=": Konvertierung von "float" in "int", möglicher Datenverlust
+  EditWindow.cpp
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\editwindow.cpp(34): warning C4838: Konvertierung von "float" zu "LONG" erfordert eine einschränkende Konvertierung
+c:\users\nils-\source\repos\d2dplatformer-mapcreator\d2dplatformer-mapcreator\editwindow.cpp(34): warning C4244: "Initialisierung": Konvertierung von "float" in "LONG", möglicher Datenverlust
+  EditController.cpp
+  Dummy.cpp
+  Brick.cpp
+  Background.cpp
+  Code wird generiert...
+  D2DPlatformer.vcxproj -> C:\Users\nils-\Source\Repos\D2DPlatformer-MapCreator\D2DPlatformer-MapCreator\Debug\D2DPlatformer.exe
+  D2DPlatformer.vcxproj -> C:\Users\nils-\Source\Repos\D2DPlatformer-MapCreator\D2DPlatformer-MapCreator\Debug\D2DPlatformer.pdb (Full PDB)
