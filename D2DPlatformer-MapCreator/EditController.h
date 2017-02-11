@@ -34,6 +34,7 @@ class EditController
 	bool isDummyActive;
 
 	Object* m_pCurrentlySelected;
+
 public:
 
 	EditController(EditWindow* pEditWindow);

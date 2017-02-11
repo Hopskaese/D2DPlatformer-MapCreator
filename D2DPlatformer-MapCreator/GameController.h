@@ -40,6 +40,7 @@ class GameController
 	bool				isDragging;
 
 public:
+
 	GameController(MainWindow* pMainWindow);
 	~GameController();
 
