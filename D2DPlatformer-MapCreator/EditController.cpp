@@ -5,9 +5,7 @@ EditController::EditController(EditWindow* pEditWindow)
 {
 	m_pEditWindow = pEditWindow;
 	isEditModeActive = false;
-	isBackGroundActive = false;
-	isBrickActive = false;
-	isDummyActive = false;
+	m_bCurrentCreationMode = 0;
 	m_pCurrentlySelected = NULL;
 }
 
@@ -46,7 +44,12 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 	break;
 	case WM_CREATESELECTED:
 	{
-		CreateSelected();
+		if (wParam == OT_BACKGROUND)
+			CreateSelectedBackgroundControls((Background*)m_pCurrentlySelected);
+		else if (wParam == OT_BRICK)
+			CreateSelectedBrickControls((Brick*)m_pCurrentlySelected);
+
+		UpdateWindow(m_pEditWindow->GetHwnd());
 	}
 	break;
 	case WM_COMMAND:
@@ -73,9 +76,9 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 			if (isBackGroundActive)
 				GetBackGroundInput();
 				*/
-		    if (isBrickActive)
+			if (m_bCurrentCreationMode == OT_BRICK)
 				GetBrickInput(WT_OBJECT);
-			else if (isDummyActive)
+			else if (m_bCurrentCreationMode == OT_DUMMY);
 				GetDummyInput();
 		}
 		break;
@@ -87,8 +90,8 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 				break;
 			}
 
-			SetMenuControlsFalse();
-			isBackGroundActive = true;
+
+			m_bCurrentCreationMode = OT_BACKGROUND;
 
 			ClearControls();
 			CreateBackgroundControls(hWnd);
@@ -102,8 +105,7 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 				break;
 			}
 
-			SetMenuControlsFalse();
-			isBrickActive = true;
+			m_bCurrentCreationMode = OT_BRICK;
 
 			ClearControls();
 			CreateBrickControls(hWnd);
@@ -117,8 +119,7 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 				break;
 			}
 
-			SetMenuControlsFalse();
-			isDummyActive = true;
+			m_bCurrentCreationMode = OT_DUMMY;
 
 			ClearControls();
 			CreateDummyControls(hWnd);
@@ -187,8 +188,9 @@ void EditController::GameControllerMessageHandler(int bMessage, ...)
 					printf("equal\n");
 					break;
 				}
+			int bTemp = OT_BACKGROUND;
 			m_pCurrentlySelected = pBackground;
-			PostMessage(m_pEditWindow->GetHwnd(), WM_CREATESELECTED, NULL, NULL);
+			PostMessage(m_pEditWindow->GetHwnd(), WM_CREATESELECTED, reinterpret_cast<WPARAM &>(bTemp), NULL);
 		}
 		else if (bType == OT_BRICK)
 		{
@@ -200,8 +202,9 @@ void EditController::GameControllerMessageHandler(int bMessage, ...)
 					printf("equal\n");
 					break;
 				}
+			int bTemp = OT_BRICK;
 			m_pCurrentlySelected = pBrick;
-			PostMessage(m_pEditWindow->GetHwnd(), WM_CREATESELECTED, NULL, NULL);
+			PostMessage(m_pEditWindow->GetHwnd(), WM_CREATESELECTED, reinterpret_cast<WPARAM &>(bTemp), NULL);
 		}
 		else if (bType == OT_DUMMY)
 		{
@@ -692,25 +695,6 @@ void EditController::CreateDummyControls(HWND hWnd)
 		NULL);
 	pControl = new Control(temp, WT_OTHER);
 	m_pControls.push_back(pControl);
-}
-
-void EditController::SetMenuControlsFalse()
-{
-	isBackGroundActive = false;
-	isBrickActive = false;
-	isDummyActive = false;
-}
-
-void EditController::CreateSelected()
-{
-	ClearSelectedControls();
-
-	if (Object::instanceof<Background>(m_pCurrentlySelected))
-		CreateSelectedBackgroundControls((Background*)m_pCurrentlySelected);
-	else if (Object::instanceof<Brick>(m_pCurrentlySelected))
-		CreateSelectedBrickControls((Brick*)m_pCurrentlySelected);
-
-	UpdateWindow(m_pEditWindow->GetHwnd());
 }
 
 void EditController::CreateSelectedBackgroundControls(Background* pBackground)

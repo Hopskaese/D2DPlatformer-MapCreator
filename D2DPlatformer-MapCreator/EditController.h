@@ -28,11 +28,8 @@ class EditController
     std::string src;
 
 	bool isEditModeActive;
-	bool isBackGroundActive;
 
-	bool isBrickActive;
-	bool isDummyActive;
-
+	int m_bCurrentCreationMode;
 	Object* m_pCurrentlySelected;
 
 public:
@@ -46,15 +43,12 @@ public:
 	void InitNormalMode();
 	void InitEditMode();
 
-	void SetMenuControlsFalse();
-
 	void CreateStartingControls(HWND hWnd);
 	void CreateMainControls(HWND hWnd);
 	void CreateBackgroundControls(HWND hWnd);
 	void CreateBrickControls(HWND hWnd);
 	void CreateDummyControls(HWND hWnd);
 
-	void CreateSelected();
 	void CreateSelectedBrickControls(Brick* pBrick);
 	void CreateSelectedBackgroundControls(Background* pBackground);
 	void CreateSelectedDummyControls(Dummy* pDummy);
