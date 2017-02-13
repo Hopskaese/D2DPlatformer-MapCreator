@@ -266,7 +266,6 @@ void GameController::InsertBrick(Brick* pBrick)
 
 void GameController::NewBrick(va_list arguments)
 {
-	printf("New brick\n");
 	m_pMainWindow->bBlocked = true;
 	std::string src;
 	float fX = 0.0f;
@@ -304,7 +303,6 @@ void GameController::NewBrick(va_list arguments)
 	std::wstring temp = CharToWChar(src.c_str());
 	Brick* pBrick = new Brick(fX, fY, fWidth, fHeight, fAngle);
 	pBrick->m_pSpriteSheet = new SpriteSheet((wchar_t*)temp.c_str(), m_pGraphics);
-	printf("new brick stats X [%f] Y [%f]\n", pBrick->m_fX, pBrick->m_fY);
 	InsertBrick(pBrick);
 
 	m_pMainWindow->bBlocked = false;

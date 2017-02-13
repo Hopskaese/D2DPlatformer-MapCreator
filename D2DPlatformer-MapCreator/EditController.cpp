@@ -72,13 +72,15 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		break;
 		case B_DRAW:
 		{
+			if (m_bCurrentCreationMode == 0)
+				break;
 			/*
 			if (isBackGroundActive)
 				GetBackGroundInput();
 				*/
 			if (m_bCurrentCreationMode == OT_BRICK)
 				GetBrickInput(WT_OBJECT);
-			else if (m_bCurrentCreationMode == OT_DUMMY);
+			else if (m_bCurrentCreationMode == OT_DUMMY)
 				GetDummyInput();
 		}
 		break;
@@ -89,7 +91,6 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 				MessageBox(NULL, "Chose a mode first!", "Error", MB_OK);
 				break;
 			}
-
 
 			m_bCurrentCreationMode = OT_BACKGROUND;
 
