@@ -67,6 +67,9 @@ public:
 
 	bool IsGrahpics() { return m_pGraphics != NULL; }
 
+	void RotateObject(Object* pObject, int bType);
+	void ResetTransform();
+
 	//void NewBackground(va_list arguments);
 	void NewBrick(va_list arguments);
 	void NewDummy(va_list arguments);

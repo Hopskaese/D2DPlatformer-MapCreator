@@ -44,9 +44,11 @@ LRESULT EditController::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 	break;
 	case WM_CREATESELECTED:
 	{
-		if (wParam == OT_BACKGROUND)
+		ClearSelectedControls(); 
+
+		if (Object::instanceof<Background>(m_pCurrentlySelected))
 			CreateSelectedBackgroundControls((Background*)m_pCurrentlySelected);
-		else if (wParam == OT_BRICK)
+		else if (Object::instanceof<Brick>(m_pCurrentlySelected))
 			CreateSelectedBrickControls((Brick*)m_pCurrentlySelected);
 
 		UpdateWindow(m_pEditWindow->GetHwnd());

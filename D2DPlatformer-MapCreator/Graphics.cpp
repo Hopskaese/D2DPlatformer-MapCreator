@@ -144,7 +144,7 @@ void Graphics::Draw(Background* pBackground)
 }
 
 void Graphics::Draw(Brick* pBrick)
-{
+{	
 	m_pRenderTarget->DrawBitmap(
 		pBrick->m_pSpriteSheet->GetBitmap(),
 		D2D1::RectF(pBrick->m_fX, pBrick->m_fY, pBrick->m_fX + pBrick->m_fWidth, pBrick->m_fY + pBrick->m_fHeight),
@@ -154,7 +154,7 @@ void Graphics::Draw(Brick* pBrick)
 	); 
 
 	if (!pBrick->m_pSpriteSheet)
-		DrawRectangle(pBrick->m_fX, pBrick->m_fY, pBrick->m_fWidth, pBrick->m_fHeight, 0, 0, 0);
+		DrawRectangle(pBrick->m_fX, pBrick->m_fY, pBrick->m_fWidth, pBrick->m_fHeight, 0, 0, 0);	
 }
 
 void Graphics::Draw(Dummy* pDummy)

@@ -541,16 +541,67 @@ void GameController::Render()
 	m_pGraphics->BeginDraw();
 	m_pGraphics->ClearScreen(255, 255, 255);
 
+	auto POINTCenter = GetCenter();
+
+	D2D1_SIZE_F size = m_pGraphics->GetRenderTarget()->GetSize();
 	if (m_pMap) 
 	{
 		for (auto o : m_pMap->m_objects)
+		{
+			if (Object::instanceof<Brick>(o))
+			{
+				Brick* pBrick = (Brick*)o;
+				if(pBrick->m_fAngle > 0)
+					RotateObject(o, OT_BRICK);
+			}
+					
 			m_pGraphics->Draw(o);
+			ResetTransform();
 			//o->Draw(m_pGraphics);
+		}
 	}
-
-	m_pGraphics->ResetTransform();
+	//m_pGraphics->ResetTransform();
 	Debug();
 	m_pGraphics->EndDraw();
+}
+
+void GameController::RotateObject(Object* pObject, int bType)
+{
+	auto POINTCenter = GetCenter();
+	D2D1_SIZE_F size = m_pGraphics->GetRenderTarget()->GetSize();
+
+	if (bType == OT_BRICK)
+	{
+		Brick* pBrick = (Brick*)pObject;
+
+		D2D1_POINT_2F center = D2D1::Point2F(pBrick->m_fX + pBrick->m_fWidth / 2.0f, pBrick->m_fY + pBrick->m_fHeight / 2.0f);
+		D2D1_MATRIX_3X2_F rotation = D2D1::Matrix3x2F::Rotation(pBrick->m_fAngle, center);
+		D2D1_MATRIX_3X2_F translation = D2D1::Matrix3x2F::Translation(size.width / 2 - POINTCenter.x, size.height / 2 - POINTCenter.y);
+
+		m_pGraphics->GetRenderTarget()->SetTransform(rotation * translation);
+
+	}
+	/*
+	else if (bType == OT_DUMMY)
+	{
+		Dummy* pDummy = (Dummy*)pObject;
+
+		D2D1_POINT_2F center = D2D1::Point2F(pDummy->m_fX, pDummy->m_fY);
+		D2D1_MATRIX_3X2_F rotation = D2D1::Matrix3x2F::Rotation(pDummy->m_fAngle, center);
+		D2D1_MATRIX_3X2_F translation = D2D1::Matrix3x2F::Translation(size.width / 2 - POINTCenter.x, size.height / 2 - POINTCenter.y);
+	
+		m_pGraphics->GetRenderTarget()->SetTransform(rotation * translation);
+	}
+	*/
+}
+
+void GameController::ResetTransform()
+{
+	auto POINTCenter = GetCenter();
+	D2D1_SIZE_F size = m_pGraphics->GetRenderTarget()->GetSize();
+
+	m_pGraphics->GetRenderTarget()->SetTransform(D2D1::Matrix3x2F::Identity());
+	m_pGraphics->GetRenderTarget()->SetTransform(D2D1::Matrix3x2F::Translation(size.width / 2 - POINTCenter.x, size.height / 2 - POINTCenter.y));
 }
 
 void GameController::OnRunStart(bool bDir)
